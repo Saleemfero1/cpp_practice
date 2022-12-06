@@ -3,23 +3,23 @@
 using namespace std;
 
 //---------------------------write your function code here!------------------
-void subSeq(string str,int index,string temp){
-    if(index == str.size()){
-        cout<<temp<<endl;
-        return;
-    }
-    subSeq(str,index+1,temp);
-    subSeq(str,index+1,temp+str[index]);
 
-}
 //------------------------------------driver code------------------------------
 int main(){
 int T;
 cin>>T;
 while(T--){
-string str;
-cin>>str;
-subSeq(str,0,"");
+int N;
+cin>>N;
+// if(N<<1){
+//     cout<<"it is Nagetive Number."<<endl;
+// }else{
+//     cout<<"it is Positive Number."<<endl;
+// }
+while(N){
+    int n = N<<1;
+    cout<<n;
+}
 }
 return 0;
 }
