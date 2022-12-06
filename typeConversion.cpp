@@ -74,50 +74,50 @@
 // return 0;
 // }
 
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
 
-//---------------------------write your function code here!------------------
-string finalOut(string out,string token){
-    string s ="";
-    for(int i = 0;i<out.size();i++){
-        if(token.find(out[i]) == -1){
-            s+=out[i];
-        }
-    }
-    if(s ==""){
-        return "EMPTY";
-    }else{
-        return s;
-    }
-}
+// //---------------------------write your function code here!------------------
+// string finalOut(string out,string token){
+//     string s ="";
+//     for(int i = 0;i<out.size();i++){
+//         if(token.find(out[i]) == -1){
+//             s+=out[i];
+//         }
+//     }
+//     if(s ==""){
+//         return "EMPTY";
+//     }else{
+//         return s;
+//     }
+// }
 
-string StringChallenge(string str){
-    string ans=""; 
-    for(int i = 0;i < str.size();i++){
-        if((str[i]-'0')%2==1  &&(str[i+1]-'0')%2==1){
-            ans+=str[i];
-            ans+='-';
-        }else{
-            ans+=str[i];
-        }
+// string StringChallenge(string str){
+//     string ans=""; 
+//     for(int i = 0;i < str.size();i++){
+//         if((str[i]-'0')%2==1  &&(str[i+1]-'0')%2==1){
+//             ans+=str[i];
+//             ans+='-';
+//         }else{
+//             ans+=str[i];
+//         }
         
-    }
-    return finalOut(ans,"80u75h4lqe9");
-   return ans;
-}
-// //------------------------------------driver code------------------------------
-int main(){
-int T;
-cin>>T;
-while(T--){
-string str;
-cin>>str;
-cout<<StringChallenge(str);
-}
-return 0;  
-}
+//     }
+//     return finalOut(ans,"80u75h4lqe9");
+//    return ans;
+// }
+// // //------------------------------------driver code------------------------------
+// int main(){
+// int T;
+// cin>>T;
+// while(T--){
+// string str;
+// cin>>str;
+// cout<<StringChallenge(str);
+// }
+// return 0;  
+// }
 
 // #include<iostream>
 // #include<bits/stdc++.h>
@@ -141,6 +141,72 @@ return 0;
 //     cout<<arr[i]<<" ";
 // }
 
+// }
+// return 0;
+// }
+
+//#muddasssir bhai interview question
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+//---------------------------write your function code here!------------------
+
+//------------------------------------driver code------------------------------
+int main(){
+vector<int>vect;
+long N;
+cin>>N;
+for(long i = 0; i< N; i++){
+    int x;
+    cin>>x;
+    vect.push_back(x);
+}
+map<int,int>m;
+for(long i = 0; i<N; i++){
+    m[vect[i]]++;
+}
+int maxi = INT_MIN;
+for(auto x:m){
+    maxi = max(x.second,maxi);
+}
+cout<<maxi;
+return 0;
+}
+
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// //---------------------------write your function code here!------------------
+
+// //------------------------------------driver code------------------------------
+// int main(){
+// int T;
+// cin>>T;
+// while(T--){
+// string str;
+// cin>>str;
+// string pro="",cat = "";
+// for(int i = 0; i< str.size();i++){
+//     if(str[i]=='[' || str[i]=='{'){
+//         pro+=str[i];
+//     }else if(str[i]==']' || str[i]=='}'){
+//         cat+=str[i];
+//     }
+// }
+// string ans = "";
+// sort(str.begin(),str.end());
+// ans+=pro;
+// for(int i = 0;i<str.size();i++){
+//    if(str[i]=='[' || str[i]=='{' || str[i]==']' || str[i]=='}'){
+//     continue;
+//    }else{
+//     ans+=str[i];
+//    }
+// }
+// ans+=cat;
+// cout<<ans;  
 // }
 // return 0;
 // }
